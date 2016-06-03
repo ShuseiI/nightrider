@@ -1,0 +1,24 @@
+#include"3052.h"
+main(){
+	float i,t;
+	P1.DDR=0xff;
+	while(1){
+		t=1;
+		while(t<65){
+			P1.DR.BYTE=t;
+			t=t*2;
+			i=0;
+                	while(i<3000){
+                        i++;
+               		}
+		}
+		while(t>1){
+			P1.DR.BYTE=t;
+                        t=t/2;
+			i=0;
+               		while(i<3000){
+                        i++;
+                	}
+		}
+	}
+}
